@@ -10,6 +10,8 @@ export_presets.cfg
 # Imported translations (automatically generated from CSV files)
 *.translation
 
+# Ignore Art Assets
+*.png
 # Mono-specific ignores
 .mono/
 data_*/
