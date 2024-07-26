@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsg8ppn1vun1y"]
+
+[ext_resource type="Texture2D" uid="uid://b6licpkk67p6d" path="res://art/user.png" id="1_d28t8"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_guhd6"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_v4mg1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o8iul"]
+size = Vector2(97, 103)
+
+[node name="Player" type="Node2D"]
+position = Vector2(-25, -28)
+script = ExtResource("1_guhd6")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_v4mg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(23.5, 28.5)
+shape = SubResource("RectangleShape2D_o8iul")
+
+[node name="Alien" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(23.25, 28.3542)
+scale = Vector2(5.47222, 4.89087)
+texture = ExtResource("1_d28t8")

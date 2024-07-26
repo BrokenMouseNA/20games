@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpirdxraxeufl"]
+
+[ext_resource type="Texture2D" uid="uid://j6nme3dac7po" path="res://art/background-use.png" id="1_aio1v"]
+[ext_resource type="PackedScene" uid="uid://bsg8ppn1vun1y" path="res://player.tscn" id="2_7ftss"]
+[ext_resource type="PackedScene" uid="uid://cykak4qlwi2ah" path="res://pipe.tscn" id="3_8c6t4"]
+[ext_resource type="Script" path="res://scripts/Score.gd" id="4_pd1bq"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background-use" type="Sprite2D" parent="."]
+position = Vector2(661, 304)
+scale = Vector2(13.1334, 17.2031)
+texture = ExtResource("1_aio1v")
+
+[node name="Player" parent="." instance=ExtResource("2_7ftss")]
+position = Vector2(63, 62)
+
+[node name="pipe" parent="." instance=ExtResource("3_8c6t4")]
+position = Vector2(103, 215)
+
+[node name="pipe2" parent="." instance=ExtResource("3_8c6t4")]
+position = Vector2(542, 124)
+
+[node name="pipe3" parent="." instance=ExtResource("3_8c6t4")]
+position = Vector2(1273, 403)
+rotation = -3.14159
+
+[node name="pipe4" parent="." instance=ExtResource("3_8c6t4")]
+position = Vector2(972, 200)
+
+[node name="pipe5" parent="." instance=ExtResource("3_8c6t4")]
+position = Vector2(650, 364)
+rotation = -3.14159
+
+[node name="pipe6" parent="." instance=ExtResource("3_8c6t4")]
+position = Vector2(1417, 108)
+
+[node name="Score" type="Label" parent="."]
+offset_left = 21.0
+offset_top = 245.0
+offset_right = 147.0
+offset_bottom = 309.0
+script = ExtResource("4_pd1bq")

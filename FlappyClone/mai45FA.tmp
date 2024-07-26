@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpirdxraxeufl"]
+
+[ext_resource type="Texture2D" uid="uid://j6nme3dac7po" path="res://art/background-use.png" id="1_aio1v"]
+[ext_resource type="PackedScene" uid="uid://bsg8ppn1vun1y" path="res://player.tscn" id="2_7ftss"]
+[ext_resource type="PackedScene" uid="uid://cykak4qlwi2ah" path="res://pipe.tscn" id="3_8c6t4"]
+[ext_resource type="Script" path="res://scripts/Score.gd" id="4_pd1bq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cp5gk"]
+font_size = 25
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background-use" type="Sprite2D" parent="."]
+position = Vector2(661, 304)
+scale = Vector2(23.6028, 18.2435)
+texture = ExtResource("1_aio1v")
+
+[node name="Player" parent="." instance=ExtResource("2_7ftss")]
+position = Vector2(63, 62)
+scale = Vector2(0.508595, 0.530999)
+
+[node name="pipe" parent="." instance=ExtResource("3_8c6t4")]
+position = Vector2(103, 215)
+scale = Vector2(0.664667, 0.987882)
+
+[node name="pipe2" parent="." instance=ExtResource("3_8c6t4")]
+position = Vector2(542, 124)
+scale = Vector2(0.874451, 1.07739)
+
+[node name="pipe3" parent="." instance=ExtResource("3_8c6t4")]
+position = Vector2(1273, 403)
+rotation = -3.14159
+scale = Vector2(0.406959, 0.735277)
+
+[node name="pipe4" parent="." instance=ExtResource("3_8c6t4")]
+position = Vector2(972, 200)
+scale = Vector2(0.596829, 0.803715)
+
+[node name="pipe5" parent="." instance=ExtResource("3_8c6t4")]
+position = Vector2(650, 364)
+rotation = -3.14159
+scale = Vector2(0.449756, 0.854859)
+
+[node name="pipe5" parent="pipe5" instance=ExtResource("3_8c6t4")]
+position = Vector2(650, 364)
+rotation = -3.14159
+scale = Vector2(-0.724263, -0.548846)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(10.5936, 6.30387)
+text = "0"
+label_settings = SubResource("LabelSettings_cp5gk")
+script = ExtResource("4_pd1bq")
