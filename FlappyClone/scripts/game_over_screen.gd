@@ -1,12 +1,10 @@
-extends Label
+extends Control
 
-var score
 
-@onready var gos = $UILayer/GameOverScreen
-#
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Main.score = self
+	pass # Replace with function body.
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -16,8 +14,8 @@ func _process(delta):
 func _on_restart_pressed():
 	get_tree().reload_current_scene()
 
-func set_score(value):
-	$Panel/Score.text = "Score: " + score
+#func set_score(value):
+	#$Panel/Score.text = "Score: " + str(value)
 	
-func set_high_score(value):
-	$"Panel/High Score".text = "Hi-Score: " + str(value)
+#func set_high_score(value):
+	#$"Panel/High Score".text = "Hi-Score: " + str(value)
